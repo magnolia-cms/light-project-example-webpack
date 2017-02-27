@@ -1,6 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const pkg = require('./package.json')
@@ -50,14 +51,19 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin(
       buildDeps(deps)
-    )
+    ),
+
+    new ExtractTextPlugin(pkg.name + '/bundle.css')
   ],
 
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
+        })
       }
     ]
   }
