@@ -1,0 +1,39 @@
+{
+  "name": "light-project-example-webpack",
+  "version": "0.0.1",
+  "description": "Example of build setup for a webpack-based 'light project': a Magnolia project built with light modules.",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && webpack --config=webpack.config.js",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/magnolia-cms/light-project-example-webpack.git"
+  },
+  "keywords": [
+    "mgnl",
+    "magnolia",
+    "magnolia-light-project"
+  ],
+  "contributors": [
+    "Magnolia (https://magnolia-cms.com/)",
+    "Robert Kowalski <rok@kowalski.gd>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.26.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "calculator-magnolia": "0.0.2",
+    "shareable-magnolia": "^1.0.0"
+  }
+}
