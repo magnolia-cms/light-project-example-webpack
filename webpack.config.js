@@ -44,7 +44,7 @@ module.exports = {
   entry: './_dev/app.js',
 
   output: {
-    filename: pkg.name + '/bundle.js',
+    filename: pkg.name + '/webresources/bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
 
@@ -53,7 +53,7 @@ module.exports = {
       buildDeps(deps)
     ),
 
-    new ExtractTextPlugin(pkg.name + '/bundle.css')
+    new ExtractTextPlugin(pkg.name + '/webresources/bundle.css')
   ],
 
   module: {

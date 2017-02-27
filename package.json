@@ -34,7 +34,7 @@
     "webpack": "^2.2.1"
   },
   "dependencies": {
-    "calculator-magnolia": "0.0.2",
+    "calculator-magnolia": "^0.0.3",
     "shareable-magnolia": "^1.0.0"
   }
 }
